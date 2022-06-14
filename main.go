@@ -72,18 +72,18 @@ func isValidContainer(containerNumber string) bool {
 		checkDigit = 0
 	}
 
-	return checkDigit == toString(lastChar)
+	return checkDigit == toInt(lastChar)
 }
 
 func getCalculatorValue(item string) int {
 	if containerCalculatorValues[item] == 0 {
-		return toString(item)
+		return toInt(item)
 	} else {
 		return containerCalculatorValues[item]
 	}
 }
 
-func toString(str string) int {
+func toInt(str string) int {
 	intVar, _ := strconv.Atoi(str)
 	return intVar
 }
